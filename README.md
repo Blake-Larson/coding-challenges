@@ -1,1 +1,1 @@
-# codewarsPractice
+# My Codewars Practice
