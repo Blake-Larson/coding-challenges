@@ -7,7 +7,7 @@
 function apple(x){
     //make x number
     //if statement
-    Math.pow(Number(x),2) > 1000 ? "It's hotter than the sun!!" : "Help yourself to a honeycomb Yorkie for the glovebox."
+    return Math.pow(Number(x),2) > 1000 ? "It's hotter than the sun!!" : "Help yourself to a honeycomb Yorkie for the glovebox."
 }
 
 
@@ -15,3 +15,10 @@ function apple(x){
 
 apple(5)// return false string
 apple(500)//return true string
+
+
+//Refactored
+
+function apple(x){
+    return Math.pow(Number(x),2) > 1000 ? "It's hotter than the sun!!" : "Help yourself to a honeycomb Yorkie for the glovebox."
+}
