@@ -1,34 +1,61 @@
-// You will be given a sequence of objects representing data about developers who have signed up to attend the next coding meetup that you are organising.
+// This kata is designed to test your ability to extend the functionality of built-in classes. In this case, we want you to extend the built-in Array class with the following methods: square(), cube(), average(), sum(), even() and odd().
 
-// Your task is to return a sequence which includes the developer who is the oldest. In case of a tie, include all same-age senior developers listed in the same order as they appeared in the original input array.
+// Explanation:
 
-// For example, given the following input array:
+const arr = [1, 2, 3, 4, 5];
+const emptyArr = [];
 
-// var list1 = [
-//   { firstName: 'Gabriel', lastName: 'X.', country: 'Monaco', continent: 'Europe', age: 49, language: 'PHP' },
-//   { firstName: 'Odval', lastName: 'F.', country: 'Mongolia', continent: 'Asia', age: 38, language: 'Python' },
-//   { firstName: 'Emilija', lastName: 'S.', country: 'Lithuania', continent: 'Europe', age: 19, language: 'Python' },
-//   { firstName: 'Sou', lastName: 'B.', country: 'Japan', continent: 'Asia', age: 49, language: 'PHP' },
-// ];
-// your function should return the following array:
+// square() must return a copy of the array, containing all values squared
+//map math.pow
 
-// [
-//   { firstName: 'Gabriel', lastName: 'X.', country: 'Monaco', continent: 'Europe', age: 49, language: 'PHP' },
-//   { firstName: 'Sou', lastName: 'B.', country: 'Japan', continent: 'Asia', age: 49, language: 'PHP' },
-// ]
-// Notes:
+Array.prototype.square = function () {
+  return this.map(el => Math.pow(el, 2));
+};
 
-// The input array will always be valid and formatted as in the example above and will never be empty.
+// cube() must return a copy of the array, containing all values cubed
+//map math.pow cubed
 
-//P: list of people object
+Array.prototype.cube = function () {
+  return this.map(el => Math.pow(el, 3));
+};
 
-//R: An array of the oldest people
+// average() must return the average of all array values; on an empty array must return NaN (note: the empty array is not tested in Ruby!)
+//reduce , if else for the empty array
 
-function findSenior(list) {
-  //find the oldest
+Array.prototype.average = function () {
+  return this.reduce((acc, c) => acc + c, 0) / this.length;
+};
 
-  let oldest = Math.max(...list.map(person => person.age));
+// sum() must return the sum of all array values
+// reduce
 
-  //filter out all but the oldest
-  return list.filter(person => person.age === oldest);
-}
+Array.prototype.sum = function () {
+  return this.reduce((acc, c) => acc + c, 0);
+};
+
+// even() must return an array of all even numbers
+
+Array.prototype.even = function () {
+  return this.filter(el => el % 2 === 0);
+};
+
+// odd() must return an array of all odd numbers
+
+Array.prototype.odd = function () {
+  return this.filter(el => el % 2 !== 0);
+};
+
+// Note: the original array must not be changed in any case!
+
+//P: array, integers, whole numbers,
+
+// const arr = [];
+
+// function test() {
+//   if (arr === []) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// }
+// test();
