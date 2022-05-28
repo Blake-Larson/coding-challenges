@@ -38,6 +38,7 @@ function countLanguages(list) {
     languageArr.forEach((x) => {
       counts[x] = (counts[x] || 0) + 1;
     });
+    return counts
 
-  
+}
 
