@@ -22,23 +22,7 @@ var list1 = [
 // The input array and first names will always be valid and formatted as in the example above.
 
 function findOddNames(list) {
-    console.log(list.filter(person => {
-        let nameArr = person.firstName.split('')
-        console.log(nameArr, 'nameArr')
-        let nameSum = nameArr.reduce((acc, letter) => {
-            console.log(acc, letter)
-            acc + (letter.charCodeAt(0), 0)
-        })
-        console.log(nameSum, 'nameSum')
-
-        if (nameSum % 2 !== 0) {
-            return true
-        } else {
-            return false
-        }
-    }));
+    return list.filter(person => person.firstName.split('').map(letter => letter = letter.charCodeAt(0)).reduce((acc, c) => acc + c) % 2 !== 0);
 }
 
 findOddNames(list1)
-
-console.log('a'.charCodeAt(0))
