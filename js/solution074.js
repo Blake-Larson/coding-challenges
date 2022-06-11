@@ -12,5 +12,5 @@ return num * num
 
 //E:
 
-squareNum(2) // 4
+squareNum(2) // 4 
 squareNum(5) // 25
