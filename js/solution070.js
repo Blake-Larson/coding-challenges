@@ -29,4 +29,4 @@ function switchItUp(number){
             return 'Nine'
 
     }
-}
+} 
