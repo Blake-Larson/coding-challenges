@@ -10,13 +10,10 @@ stray([17, 17, 3, 17, 17, 17, 17]) // ==> 3
 
 
 function stray(numbers) {
-    let main = []
-    numbers.forEach(num => {
-        if(main.includes(num)){
-            //
-        } else {
-            main.push(num)
-        }
-    })
+    var a = numbers.sort();
     
+    if(a[0] != a[1]) {
+      return a[0]
+    } 
+    return a[a.length-1]
   }
