@@ -1,0 +1,22 @@
+{
+  "name": "coding-challenges",
+  "version": "1.0.0",
+  "description": "A repository filled with codewars challenges (kata). I Push at least 1 solution every day.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blake-Larson/coding-challenges.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blake-Larson/coding-challenges/issues"
+  },
+  "homepage": "https://github.com/Blake-Larson/coding-challenges#readme",
+  "dependencies": {
+    "node": "^18.7.0"
+  }
+}
