@@ -4,7 +4,7 @@
 
 //given the summary find the number of pages the book has
 
-// a positive integer > 0
+// a positive integer > 0 
 
 // return number of pages
 
