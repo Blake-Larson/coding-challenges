@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+//define a book with n pages with pages 1 to n
+//define summary adding up the digits of all page numbers
+
+//given the summary find the number of pages the book has
+
+// a positive integer > 0 
+
+// return number of pages
+
+// example:
+
+// 6 => 1,2,3,4,5,6
+// 11 => 1,2,3,4,5,6,7,8,9,10
+
+function getPages(){
+    // 9 or less same number of pages as summary
+
+    // 10 
+
+
+}
+=======
 // In a small town the population is p0 = 1000 at the beginning of a year. The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town. How many years does the town need to see its population greater or equal to p = 1200 inhabitants?
 
 // At the end of the first year there will be: 
@@ -33,3 +56,4 @@ function nbYear(p0, percent, aug, p) {
     return years
 }
 
+>>>>>>> 61c31d336e0c64532e89d6e81dace67da163c311
