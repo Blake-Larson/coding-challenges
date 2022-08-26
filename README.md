@@ -1,6 +1,6 @@
 # CodeWars Challenges: <a target="_blank" href="https://www.codewars.com/users/Blars-git" >Visit Here</a> 
 
-A repository filled with codewars challenges (kata). I Push at least 1 solution every day.
+A repository filled with codewars challenges (kata). I Push at least 5 solutions every week.
 
 ## How It's Made:
 
