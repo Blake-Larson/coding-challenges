@@ -21,5 +21,6 @@ function removeSmallest(numbers) {
 	let lowestIndex = numbers.findIndex(el => el === Math.min(...numbers));
 
 	copy.splice(lowestIndex, 1);
+
 	return copy;
 }
