@@ -1,13 +1,35 @@
 //https://blog.barbaralaw.me/huntober-2022-day-1
 
 function fixString(str) {
-	strArr = str.split('');
-
 	numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 	letters = ['O', 'I', 'Z', 'E', 'h', 'S', 'G', 'L', 'B', 'q'];
 
-	let result = strArr
-		.map(el => (numbers.includes(el) ? letters[numbers.indexOf(el)] : el))
+	const key = {
+		0: 'O',
+		1: 'I',
+		2: 'Z',
+		3: 'E',
+		4: 'h',
+		5: 'S',
+		6: 'G',
+		7: 'L',
+		8: 'B',
+		9: 'q',
+		O: 0,
+		I: 1,
+		Z: 2,
+		E: 3,
+		h: 4,
+		S: 5,
+		G: 6,
+		L: 7,
+		B: 8,
+		q: 9,
+	};
+
+	let result = str
+		.split('')
+		.map(el => (key[el] ? key[el] : el))
 		.join('');
 
 	console.log(result);
