@@ -11,7 +11,7 @@
 
 function sortArray(arr) {
 	//create a new array with the odd sorted numbers
-	let odds = arr.filter(el => el % 2 !== 0);
+	let odds = arr.filter(el => el % 2);
 
 	let sortedOdds = odds.sort((a, b) => a - b);
 
@@ -21,8 +21,7 @@ function sortArray(arr) {
 		if (el % 2 === 0) {
 			return el;
 		} else {
-			el = sortedOdds[0];
-			sortedOdds.splice(0, 1);
+			sortedOdds.shift();
 			return el;
 		}
 	});
