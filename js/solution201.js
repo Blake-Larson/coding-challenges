@@ -1,0 +1,34 @@
+// Your job is to figure out the index of which vowel is missing from a given string:
+
+// A has an index of 0,
+// E has an index of 1,
+// I has an index of 2,
+// O has an index of 3,
+// U has an index of 4.
+// Notes: There is no need for string validation and every sentence given will contain all vowles but one. Also, you won't need to worry about capitals.
+
+// return index as a number
+
+// Examples
+// "John Doe hs seven red pples under his bsket"          =>  0  ; missing: "a"
+// "Bb Smith sent us six neatly arranged range bicycles"  =>  3  ; missing: "o"
+
+// function missingVowel(str) {
+//   const vowels = ['a', 'e', 'i', 'o', 'u']
+//   let index
+//   split the string and use the includes method to check each vowel
+
+//   vowels.forEach((el, i)=> !str.split('').includes(el) ? index = i : null)
+//   return index
+
+// }
+function missingVowel(str) {
+	const vowels = ['a', 'e', 'i', 'o', 'u'];
+	return vowels.indexOf(vowels.filter(el => !str.split('').includes(el))[0]);
+}
+
+console.log(missingVowel('John Doe hs seven red pples under his bsket'), 0);
+console.log(
+	missingVowel('Bb Smith sent us six neatly arranged range bicycles'),
+	3
+);
