@@ -9,26 +9,43 @@
 // findMost('PiZza'), z
 
 function findMost(str) {
-	//count how many times each character appears by using a hashmap
-	const map = {};
-	let strArr = str.toLowerCase().split('');
+	let charMap = {},
+		count = 0,
+		maxChar = null;
 
-	for (el of strArr) {
-		if (map[el]) {
-			map[el] += 1;
-		} else map[el] = 1;
+	for (const char of str) {
+		charMap[char] = charMap[char] + 1 || 1;
 	}
 
-	let num = 0;
-	let letter = '';
-	for (el in map) {
-		if (map[el] > num) {
-			num = map[el];
-			letter = el;
+	for (const char in charMap) {
+		if (charMap[char] > count) {
+			count = charMap[char];
+			maxChar = char;
 		}
 	}
-	return letter;
+	return maxChar;
 }
+// function findMost(str) {
+// 	//count how many times each character appears by using a hashmap
+// 	const map = {};
+// 	let strArr = str.toLowerCase().split('');
+
+// 	for (el of strArr) {
+// 		if (map[el]) {
+// 			map[el] += 1;
+// 		} else map[el] = 1;
+// 	}
+
+// 	let num = 0;
+// 	let letter = '';
+// 	for (el in map) {
+// 		if (map[el] > num) {
+// 			num = map[el];
+// 			letter = el;
+// 		}
+// 	}
+// 	return letter;
+// }
 
 console.log(findMost('aabcde'), 'a');
 console.log(findMost('Audreyy'), 'y');
